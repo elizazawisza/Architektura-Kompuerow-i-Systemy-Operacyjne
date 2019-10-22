@@ -1,0 +1,41 @@
+﻿    Input
+    Store   A
+    Input
+    Store   B
+	Clear
+    Store X
+    
+Loop,   Load    A  
+    Subt    B
+    Store   A
+    
+    Skipcond 800
+    Jump    lastStep / While X is positive it will continue
+    Load    X
+    Add     One
+    Store   X
+    Jump Loop
+
+lastStep, Load    A
+		Skipcond 400  /While A is 0 it will continue
+   	 	Jump Rest
+        Load    X
+    	Add     One
+    	Store   X
+    	Jump    Endloop
+
+Rest, Load    X
+    Output   /print quotient
+	Load B
+	Add A
+    Store  B
+	Output /print rest of division
+    Halt
+
+Endloop, Load    X
+    Output   /print quotient
+    Halt
+A,  DEC     0
+B,  DEC     0
+X,  DEC     0
+One, DEC    1
