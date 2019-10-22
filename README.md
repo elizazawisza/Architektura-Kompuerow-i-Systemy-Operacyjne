@@ -1,1 +1,1 @@
-# Architektura-Kompuerow-i-Systemy-Operacyjne
+# Architektura Komputerów i Systemy Operacyjne
